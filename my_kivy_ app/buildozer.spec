@@ -158,3 +158,4 @@ android.enable_androidx = True
 
 # (str) Name of the certificate to use for signing the release version
 # ios.codesign.release = %(ios.codesign.debug)s
+android.skip_update = True
