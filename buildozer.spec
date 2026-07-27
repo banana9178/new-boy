@@ -37,8 +37,7 @@ android.api = 30
 # (int) Minimum API your APK will support.
 android.minapi = 21
 
-# (int) Android SDK version to use
-android.sdk = 30
+
 
 # (str) Android NDK version to use
 android.ndk = 23b
@@ -56,4 +55,4 @@ android.accept_ndk_license = True
 android.enable_androidx = True
 
 # (bool) If True, then skip trying to update the Android sdk
-android.skip_update = True
+android.skip_update = False
