@@ -23,19 +23,6 @@ jobs:
 
       - name: Build APK
         run: |
-          ls -la my_kivy_app
-          buildozer -v android debug --directory my_kivy_app
-          
-          sed -i 's/android.accept_sdk_license = False/android.accept_sdk_license = True/' buildozer.spec
-          sed -i 's/android.enforce_sdk_license = True/android.enforce_sdk_license = False/' buildozer.spec
-          sed -i 's/android.enforce_android_license = True/android.enforce_android_license = False/' buildozer.spec
-          
-          sed -i 's/android.sdk_version = [0-9]*/android.sdk_version = 33/' buildozer.spec
-          sed -i 's/android.ndk_version = [0-9a-z.]*/android.ndk_version = 23b/' buildozer.spec
-          # 设置包名
-          sed -i 's/package.name = .*/package.name = myapp/' buildozer.spec
-          sed -i 's/package.domain = .*/package.domain = org.myapp/' buildozer.spec
-          # 执行打包
           buildozer -v android debug
 
       - name: Upload APK artifact
