@@ -19,7 +19,7 @@ source.include_exts = py,png,jpg,kv,atlas
 version = 0.1
 
 # (list) Application requirements
-requirements = python3,kivy==2.3.0
+requirements = kivy==2.3.0
 
 # (str) Supported orientation (one of landscape, sensorLandscape, portrait or all)
 orientation = portrait
@@ -37,8 +37,6 @@ android.api = 30
 # (int) Minimum API your APK will support.
 android.minapi = 21
 
-
-
 # (str) Android NDK version to use
 android.ndk = 23b
 
@@ -55,4 +53,4 @@ android.accept_ndk_license = True
 android.enable_androidx = True
 
 # (bool) If True, then skip trying to update the Android sdk
-android.skip_update = False
+android.skip_update = True
