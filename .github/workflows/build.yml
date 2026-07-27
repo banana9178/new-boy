@@ -23,10 +23,8 @@ jobs:
 
       - name: Build APK
         run: |
-          ls -la
-          cd my_kivy_app
-          ls -la
-          buildozer -v android debug
+          ls -la my_kivy_app
+          buildozer -v android debug --directory my_kivy_app
           
           sed -i 's/android.accept_sdk_license = False/android.accept_sdk_license = True/' buildozer.spec
           sed -i 's/android.enforce_sdk_license = True/android.enforce_sdk_license = False/' buildozer.spec
