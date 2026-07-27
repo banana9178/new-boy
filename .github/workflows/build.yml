@@ -23,7 +23,7 @@ jobs:
 
       - name: Build APK
         run: |
-          buildozer init
+          buildozer -v android debug
           
           sed -i 's/android.accept_sdk_license = False/android.accept_sdk_license = True/' buildozer.spec
           sed -i 's/android.enforce_sdk_license = True/android.enforce_sdk_license = False/' buildozer.spec
